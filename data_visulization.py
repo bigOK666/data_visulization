@@ -22,3 +22,8 @@ color_not_interested='#d9534f'
 df_decend.plot(kind='bar',ax = ax, title="Percentage of Respondents' Interest in Data Science Areas", color=[color_very_interested, color_somewhat_interested, color_not_interested], width=bar_width, fontsize=14)
 ax.title.set_size(16)
 plt.legend(fontsize=14)
+# remove the left top right borders and axis ticks
+plt.yticks([])
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_visible(False)
