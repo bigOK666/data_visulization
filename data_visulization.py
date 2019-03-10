@@ -27,3 +27,9 @@ plt.yticks([])
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
+
+#add annotation above bar
+for i in ax.patches:
+    width, height = i.get_width(), i.get_height()
+    x, y = i.get_xy()
+    ax.annotate('{:.2%}'.format(height), (i.get_x()+0.15*width, i.get_y()+ height +0.01))
