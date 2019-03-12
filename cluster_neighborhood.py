@@ -9,4 +9,9 @@ soup=BeautifulSoup(website_url, 'lxml')
 ### since the table data is in table tag with class wikitable sortable so we can get them
 
 My_table=soup.find('table', {'class':'wikitable sortable'})
-print(My_table)
+#print(My_table)
+
+### get headers as table column title
+headers = [header.text for header in My_table.find_all('th')]
+headers[2] = headers[2][:-1]
+print(headers)
