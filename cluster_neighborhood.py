@@ -15,3 +15,8 @@ My_table=soup.find('table', {'class':'wikitable sortable'})
 headers = [header.text for header in My_table.find_all('th')]
 headers[2] = headers[2][:-1]
 print(headers)
+
+### get raw data from table content in td tag
+rows = []
+for row in My_table.find_all('tr'):
+    rows.append([val.text for val in row.find_all('td')])
