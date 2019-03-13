@@ -50,3 +50,6 @@ df_borough_grouped['Latitude'] = df_coordinate['Latitude']
 df_borough_grouped['Longitude'] = df_coordinate['Longitude']
 
 print(df_borough_grouped)
+
+### analyse only borough containing Toronto
+df_borough_toronto=df_borough_grouped[df_borough_grouped['Borough'].str.contains("Toronto")].reset_index()

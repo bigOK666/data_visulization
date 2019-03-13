@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac31f642-d275-486a-afc1-7175f4048dc4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cluster_neighborhood.py" beforeDir="false" afterPath="$PROJECT_DIR$/cluster_neighborhood.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cluster_neighborhood.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="839">
-              <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+            <state relative-caret-position="821">
+              <caret line="54" column="106" selection-start-line="54" selection-start-column="106" selection-end-line="54" selection-end-column="106" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -165,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552501663260</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="read coordinate data from csv file and add the data to borough dataframe">
+      <created>1552508021719</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1552508021719</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -239,13 +247,14 @@
     <MESSAGE value="get raw table content from tag td" />
     <MESSAGE value="create first version of dataframe from webpage data" />
     <MESSAGE value="clean the dataframe so that no &quot;\n&quot; is in it and the data are grouped by post code and borough" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean the dataframe so that no &quot;\n&quot; is in it and the data are grouped by post code and borough" />
+    <MESSAGE value="read coordinate data from csv file and add the data to borough dataframe" />
+    <option name="LAST_COMMIT_MESSAGE" value="read coordinate data from csv file and add the data to borough dataframe" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cluster_neighborhood.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+        <state relative-caret-position="821">
+          <caret line="54" column="106" selection-start-line="54" selection-start-column="106" selection-end-line="54" selection-end-column="106" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
