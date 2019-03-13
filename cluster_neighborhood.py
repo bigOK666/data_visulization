@@ -43,3 +43,10 @@ df_valid_borough['Neighbourhood'] = np.where(df_valid_borough['Neighbourhood']==
 
 df_borough_grouped=df_valid_borough.groupby(['Postcode', 'Borough'], as_index=False).agg({'Neighbourhood':lambda x: ','.join(x)})
 #df_borough_grouped
+# read coordinates data from csv file and create dataframe
+df_coordinate=pd.read_csv('Geospatial_Coordinates.csv')
+# add the coordinate data to df_borough_grouped
+df_borough_grouped['Latitude'] = df_coordinate['Latitude']
+df_borough_grouped['Longitude'] = df_coordinate['Longitude']
+
+print(df_borough_grouped)
