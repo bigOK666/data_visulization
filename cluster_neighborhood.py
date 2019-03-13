@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import numpy as np
 
 # get the content of wikipedia page
 website_url = requests.get('https://en.wikipedia.org/wiki/List_of_postal_codes_of_Canada:_M').text
@@ -24,4 +25,21 @@ for row in My_table.find_all('tr'):
 
 ### create raw dataframe from webpage
 df = pd.DataFrame(rows, columns = headers)
-df.head()
+#df.head()
+
+df_valid=df[df.Borough.notnull()]
+
+#df_valid.head()
+
+df_valid_borough = df_valid[df_valid.Borough != "Not assigned"]
+#df_valid_borough.head()
+
+df_valid_borough = df_valid_borough.replace("\n", "", regex=True)
+#df_valid_borough
+
+
+df_valid_borough['Neighbourhood'] = np.where(df_valid_borough['Neighbourhood']=="Not assigned", df_valid_borough['Borough'], df_valid_borough['Neighbourhood'])
+#df_valid_borough
+
+df_borough_grouped=df_valid_borough.groupby(['Postcode', 'Borough'], as_index=False).agg({'Neighbourhood':lambda x: ','.join(x)})
+#df_borough_grouped
