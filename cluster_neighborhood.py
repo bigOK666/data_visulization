@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 from geopy.geocoders import Nominatim
+import folium
 
 # get the content of wikipedia page
 website_url = requests.get('https://en.wikipedia.org/wiki/List_of_postal_codes_of_Canada:_M').text
@@ -63,3 +64,23 @@ location = geolocator.geocode(address)
 latitude = location.latitude
 longitude = location.longitude
 print('The geograpical coordinate of Toronto are {}, {}.'.format(latitude, longitude))
+
+
+
+map_toronto = folium.Map(location=[latitude, longitude], zoom_start=11)
+
+# add markers to map
+for lat, lng, label in zip(df_borough_toronto['Latitude'], df_borough_toronto['Longitude'],
+                           df_borough_toronto['Neighbourhood']):
+    label = folium.Popup(label, parse_html=True)
+    folium.CircleMarker(
+        [lat, lng],
+        radius=5,
+        popup=label,
+        color='blue',
+        fill=True,
+        fill_color='#3186cc',
+        fill_opacity=0.7,
+        parse_html=False).add_to(map_toronto)
+
+map_toronto
