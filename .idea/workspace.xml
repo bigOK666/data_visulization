@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cluster_neighborhood.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="821">
-              <caret line="54" column="106" selection-start-line="54" selection-start-column="106" selection-end-line="54" selection-end-column="106" />
+            <state relative-caret-position="839">
+              <caret line="64" column="86" selection-start-line="64" selection-start-column="86" selection-end-line="64" selection-end-column="86" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -48,7 +48,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -60,6 +59,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -173,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552508021719</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="analyse the borough containing Toronto">
+      <created>1552515039156</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1552515039156</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -248,13 +255,14 @@
     <MESSAGE value="create first version of dataframe from webpage data" />
     <MESSAGE value="clean the dataframe so that no &quot;\n&quot; is in it and the data are grouped by post code and borough" />
     <MESSAGE value="read coordinate data from csv file and add the data to borough dataframe" />
-    <option name="LAST_COMMIT_MESSAGE" value="read coordinate data from csv file and add the data to borough dataframe" />
+    <MESSAGE value="analyse the borough containing Toronto" />
+    <option name="LAST_COMMIT_MESSAGE" value="analyse the borough containing Toronto" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cluster_neighborhood.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="54" column="106" selection-start-line="54" selection-start-column="106" selection-end-line="54" selection-end-column="106" />
+        <state relative-caret-position="839">
+          <caret line="64" column="86" selection-start-line="64" selection-start-column="86" selection-end-line="64" selection-end-column="86" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

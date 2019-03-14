@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
+from geopy.geocoders import Nominatim
 
 # get the content of wikipedia page
 website_url = requests.get('https://en.wikipedia.org/wiki/List_of_postal_codes_of_Canada:_M').text
@@ -53,3 +54,12 @@ print(df_borough_grouped)
 
 ### analyse only borough containing Toronto
 df_borough_toronto=df_borough_grouped[df_borough_grouped['Borough'].str.contains("Toronto")].reset_index()
+
+### get coordinate of Toronto
+address = 'Toronto'
+
+geolocator = Nominatim(user_agent="ny_explorer")
+location = geolocator.geocode(address)
+latitude = location.latitude
+longitude = location.longitude
+print('The geograpical coordinate of Toronto are {}, {}.'.format(latitude, longitude))
