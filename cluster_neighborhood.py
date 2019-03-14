@@ -84,3 +84,11 @@ for lat, lng, label in zip(df_borough_toronto['Latitude'], df_borough_toronto['L
         parse_html=False).add_to(map_toronto)
 
 map_toronto
+
+CLIENT_ID = '' # your Foursquare ID
+CLIENT_SECRET = '' # your Foursquare Secret
+VERSION = '20180605' # Foursquare API version
+
+print('Your credentails:')
+print('CLIENT_ID: ' + CLIENT_ID)
+print('CLIENT_SECRET:' + CLIENT_SECRET)
