@@ -138,3 +138,21 @@ toronto_venues = getNearbyVenues(names=df_borough_toronto['Neighbourhood'],
                                    latitudes=df_borough_toronto['Latitude'],
                                    longitudes=df_borough_toronto['Longitude']
                                   )
+# examine size of toronto venues
+print(toronto_venues.shape)
+print(toronto_venues.head())
+
+print(toronto_venues.groupby('Neighbourhood').count())
+
+# onehot encoding
+toronto_onehot = pd.get_dummies(toronto_venues[['Venue Category']], prefix="", prefix_sep="")
+
+# add neighborhood column back to dataframe
+toronto_onehot['Neighbourhood'] = toronto_venues['Neighbourhood']
+
+# move neighborhood column to the first column
+fixed_columns = [toronto_onehot.columns[-1]] + list(toronto_onehot.columns[:-1])
+toronto_onehot = toronto_onehot[fixed_columns]
+
+print(toronto_onehot.head())
+
