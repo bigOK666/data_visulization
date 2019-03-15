@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 from geopy.geocoders import Nominatim
 import folium
+from sklearn.cluster import KMeans
 
 # get the content of wikipedia page
 website_url = requests.get('https://en.wikipedia.org/wiki/List_of_postal_codes_of_Canada:_M').text
@@ -187,3 +188,16 @@ for ind in np.arange(toronto_grouped.shape[0]):
     neighborhoods_venues_sorted.iloc[ind, 1:] = return_most_common_venues(toronto_grouped.iloc[ind, :], num_top_venues)
 
 print(neighborhoods_venues_sorted.head())
+
+#cluster neighbourhood
+
+# set number of clusters
+kclusters = 5
+
+toronto_grouped_clustering = toronto_grouped.drop('Neighbourhood', 1)
+
+# run k-means clustering
+kmeans = KMeans(n_clusters=kclusters, random_state=0).fit(toronto_grouped_clustering)
+
+# check cluster labels generated for each row in the dataframe
+print(kmeans.labels_[0:10])
