@@ -201,3 +201,13 @@ kmeans = KMeans(n_clusters=kclusters, random_state=0).fit(toronto_grouped_cluste
 
 # check cluster labels generated for each row in the dataframe
 print(kmeans.labels_[0:10])
+
+# add clustering labels
+neighborhoods_venues_sorted.insert(1, 'Cluster Labels', kmeans.labels_)
+
+toronto_merged = df_borough_toronto
+
+# merge toronto_grouped with toronto_data to add latitude/longitude for each neighborhood
+toronto_merged = toronto_merged.join(neighborhoods_venues_sorted.set_index('Neighbourhood'), on='Neighbourhood')
+
+#toronto_merged.head() # check the last columns!
