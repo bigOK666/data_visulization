@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cluster_neighborhood.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="202" column="27" selection-start-line="202" selection-start-column="27" selection-end-line="202" selection-end-column="27" />
+            <state relative-caret-position="526">
+              <caret line="240" column="19" selection-start-line="240" selection-start-column="19" selection-end-line="240" selection-end-column="19" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -230,7 +230,21 @@
       <option name="project" value="LOCAL" />
       <updated>1552678195184</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="cluster neighbourhood">
+      <created>1552678351365</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1552678351365</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add cluster labels">
+      <created>1552678391208</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1552678391208</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -312,13 +326,15 @@
     <MESSAGE value="get nearby venues of every neighnourhood by using Foursquare service" />
     <MESSAGE value="onehot encoding the data" />
     <MESSAGE value="group the encoded data by Neighbourhood" />
-    <option name="LAST_COMMIT_MESSAGE" value="group the encoded data by Neighbourhood" />
+    <MESSAGE value="cluster neighbourhood" />
+    <MESSAGE value="add cluster labels" />
+    <option name="LAST_COMMIT_MESSAGE" value="add cluster labels" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cluster_neighborhood.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="202" column="27" selection-start-line="202" selection-start-column="27" selection-end-line="202" selection-end-column="27" />
+        <state relative-caret-position="526">
+          <caret line="240" column="19" selection-start-line="240" selection-start-column="19" selection-end-line="240" selection-end-column="19" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

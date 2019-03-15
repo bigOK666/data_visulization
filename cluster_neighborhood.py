@@ -211,3 +211,31 @@ toronto_merged = df_borough_toronto
 toronto_merged = toronto_merged.join(neighborhoods_venues_sorted.set_index('Neighbourhood'), on='Neighbourhood')
 
 #toronto_merged.head() # check the last columns!
+
+import matplotlib.cm as cm
+import matplotlib.colors as colors
+
+# create map
+map_clusters = folium.Map(location=[latitude, longitude], zoom_start=11)
+
+# set color scheme for the clusters
+x = np.arange(kclusters)
+ys = [i + x + (i * x) ** 2 for i in range(kclusters)]
+colors_array = cm.rainbow(np.linspace(0, 1, len(ys)))
+rainbow = [colors.rgb2hex(i) for i in colors_array]
+
+# add markers to the map
+markers_colors = []
+for lat, lon, poi, cluster in zip(toronto_merged['Latitude'], toronto_merged['Longitude'],
+                                  toronto_merged['Neighbourhood'], toronto_merged['Cluster Labels']):
+    label = folium.Popup(str(poi) + ' Cluster ' + str(cluster), parse_html=True)
+    folium.CircleMarker(
+        [lat, lon],
+        radius=5,
+        popup=label,
+        color=rainbow[cluster - 1],
+        fill=True,
+        fill_color=rainbow[cluster - 1],
+        fill_opacity=0.7).add_to(map_clusters)
+
+print(map_clusters)
