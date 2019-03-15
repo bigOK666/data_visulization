@@ -159,3 +159,31 @@ print(toronto_onehot.head())
 # group the data
 toronto_grouped = toronto_onehot.groupby('Neighbourhood').mean().reset_index()
 print(toronto_grouped)
+
+# define a function to return most commen venues
+def return_most_common_venues(row, num_top_venues):
+    row_categories = row.iloc[1:]
+    row_categories_sorted = row_categories.sort_values(ascending=False)
+
+    return row_categories_sorted.index.values[0:num_top_venues]
+
+num_top_venues = 5
+
+indicators = ['st', 'nd', 'rd']
+
+# create columns according to number of top venues
+columns = ['Neighbourhood']
+for ind in np.arange(num_top_venues):
+    try:
+        columns.append('{}{} Most Common Venue'.format(ind+1, indicators[ind]))
+    except:
+        columns.append('{}th Most Common Venue'.format(ind+1))
+
+# create a new dataframe
+neighborhoods_venues_sorted = pd.DataFrame(columns=columns)
+neighborhoods_venues_sorted['Neighbourhood'] = toronto_grouped['Neighbourhood']
+
+for ind in np.arange(toronto_grouped.shape[0]):
+    neighborhoods_venues_sorted.iloc[ind, 1:] = return_most_common_venues(toronto_grouped.iloc[ind, :], num_top_venues)
+
+print(neighborhoods_venues_sorted.head())
