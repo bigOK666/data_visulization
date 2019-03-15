@@ -156,3 +156,6 @@ toronto_onehot = toronto_onehot[fixed_columns]
 
 print(toronto_onehot.head())
 
+# group the data
+toronto_grouped = toronto_onehot.groupby('Neighbourhood').mean().reset_index()
+print(toronto_grouped)

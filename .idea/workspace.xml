@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cluster_neighborhood.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="134" column="45" selection-start-line="134" selection-start-column="45" selection-end-line="134" selection-end-column="45" />
+            <state relative-caret-position="526">
+              <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -39,7 +39,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+    <option name="x" value="917" />
+    <option name="y" value="56" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -201,11 +202,25 @@
       <option name="project" value="LOCAL" />
       <updated>1552605449957</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="get nearby venues of every neighnourhood by using Foursquare service">
+      <created>1552677740471</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1552677740471</updated>
+    </task>
+    <task id="LOCAL-00014" summary="onehot encoding the data">
+      <created>1552678069460</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1552678069460</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="917" y="56" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -280,13 +295,15 @@
     <MESSAGE value="get coordinate of toronto" />
     <MESSAGE value="show neighborhoods in map" />
     <MESSAGE value="define foursquare credentials and version" />
-    <option name="LAST_COMMIT_MESSAGE" value="define foursquare credentials and version" />
+    <MESSAGE value="get nearby venues of every neighnourhood by using Foursquare service" />
+    <MESSAGE value="onehot encoding the data" />
+    <option name="LAST_COMMIT_MESSAGE" value="onehot encoding the data" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cluster_neighborhood.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="134" column="45" selection-start-line="134" selection-start-column="45" selection-end-line="134" selection-end-column="45" />
+        <state relative-caret-position="526">
+          <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
