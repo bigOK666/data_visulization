@@ -17,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/cluster_neighborhood.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="436">
-              <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+              <caret line="134" column="45" selection-start-line="134" selection-start-column="45" selection-end-line="134" selection-end-column="45" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -48,6 +48,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -59,7 +60,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552605371611</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="define foursquare credentials and version">
+      <created>1552605449957</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1552605449957</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -272,13 +279,14 @@
     <MESSAGE value="analyse the borough containing Toronto" />
     <MESSAGE value="get coordinate of toronto" />
     <MESSAGE value="show neighborhoods in map" />
-    <option name="LAST_COMMIT_MESSAGE" value="show neighborhoods in map" />
+    <MESSAGE value="define foursquare credentials and version" />
+    <option name="LAST_COMMIT_MESSAGE" value="define foursquare credentials and version" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cluster_neighborhood.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
-          <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+          <caret line="134" column="45" selection-start-line="134" selection-start-column="45" selection-end-line="134" selection-end-column="45" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

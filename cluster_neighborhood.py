@@ -83,8 +83,8 @@ for lat, lng, label in zip(df_borough_toronto['Latitude'], df_borough_toronto['L
         fill_opacity=0.7,
         parse_html=False).add_to(map_toronto)
 
-map_toronto
-
+print(map_toronto)
+# define Foursquare service
 CLIENT_ID = '' # your Foursquare ID
 CLIENT_SECRET = '' # your Foursquare Secret
 VERSION = '20180605' # Foursquare API version
@@ -92,3 +92,49 @@ VERSION = '20180605' # Foursquare API version
 print('Your credentails:')
 print('CLIENT_ID: ' + CLIENT_ID)
 print('CLIENT_SECRET:' + CLIENT_SECRET)
+
+# define function to get nearby venues
+def getNearbyVenues(names, latitudes, longitudes, radius=500):
+    venues_list = []
+    for name, lat, lng in zip(names, latitudes, longitudes):
+        print(name)
+
+        # create the API request URL
+        url = 'https://api.foursquare.com/v2/venues/explore?&client_id={}&client_secret={}&v={}&ll={},{}&radius={}&limit={}'.format(
+            CLIENT_ID,
+            CLIENT_SECRET,
+            VERSION,
+            lat,
+            lng,
+            radius,
+            LIMIT)
+
+        # make the GET request
+        results = requests.get(url).json()["response"]['groups'][0]['items']
+
+        # return only relevant information for each nearby venue
+        venues_list.append([(
+            name,
+            lat,
+            lng,
+            v['venue']['name'],
+            v['venue']['location']['lat'],
+            v['venue']['location']['lng'],
+            v['venue']['categories'][0]['name']) for v in results])
+
+    nearby_venues = pd.DataFrame([item for venue_list in venues_list for item in venue_list])
+    nearby_venues.columns = ['Neighbourhood',
+                             'Neighbourhood Latitude',
+                             'Neighbourhood Longitude',
+                             'Venue',
+                             'Venue Latitude',
+                             'Venue Longitude',
+                             'Venue Category']
+
+    return (nearby_venues)
+# get nearby 50 venues of every neighbourhood
+LIMIT = 50
+toronto_venues = getNearbyVenues(names=df_borough_toronto['Neighbourhood'],
+                                   latitudes=df_borough_toronto['Latitude'],
+                                   longitudes=df_borough_toronto['Longitude']
+                                  )
